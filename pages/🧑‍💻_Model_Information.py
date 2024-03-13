@@ -6,15 +6,15 @@ import plotly.express as px
 import numpy as np
 
 def show_model_information():
-    st.title('Model Information')
-    st.caption('Awalnya, saya menggunakan 5 model untuk memprediksi penyakit jantung, yaitu:')
-    st.caption('1. Logistic Regression')
-    st.caption('2. Gradient Boosting Classifier')
-    st.caption('3. CatBoost Classifier')
-    st.caption('4. Naive Bayes')
-    st.caption('5. XGBoost Classifier')
-    st.subheader('Berikut adalah akurasi dari setiap model')
+    st.title('🧑‍💻 Model Information')
+    st.write('Awalnya, saya menggunakan 5 model untuk memprediksi penyakit jantung, yaitu:')
+    st.write('1. Logistic Regression')
+    st.write('2. Gradient Boosting Classifier')
+    st.write('3. CatBoost Classifier')
+    st.write('4. Naive Bayes')
+    st.write('5. XGBoost Classifier')
 
+    st.subheader('📈 Berikut adalah akurasi dari setiap model')
 
     nama_model = ['Logistic Regression', 'Gradient Boosting', 'CatBoost', 'Naive Bayes', 'XGBoost']
     scoreTrainArr = [0.8542234332425068, 0.9019073569482289, 0.8896457765667575, 0.8365122615803815, 0.9373297002724795]
@@ -29,10 +29,10 @@ def show_model_information():
     x_pos = np.arange(len(nama_model))
 
     # Plot untuk akurasi train
-    train_bars = ax.bar(x_pos, scoreTrainArr, width=bar_width, align='center', alpha=0.8, label='Train Accuracy')
+    train_bars = ax.bar(x_pos, scoreTrainArr, width=bar_width, align='center', label='Train Accuracy')
 
     # Plot untuk akurasi test
-    test_bars = ax.bar(x_pos + bar_width, scoreTestArr, width=bar_width, align='center', alpha=0.8, label='Test Accuracy')
+    test_bars = ax.bar(x_pos + bar_width, scoreTestArr, width=bar_width, align='center', label='Test Accuracy')
 
     ax.set_xticks(x_pos + bar_width / 2)
     ax.set_xticklabels(nama_model)
@@ -56,11 +56,11 @@ def show_model_information():
 
     st.pyplot(fig)
 
-    st.caption('Tampak bahwa model Catboost menghasilkan akurasi tertinggi ketika memprediksi data test. Selain itu, akurasinya pun tidak jauh berbeda dengan akurasi data train.')
-    st.caption('Hal tersebut menunjukkan bahwa model Catboost tidak overfitting dan tidak underfitting, serta lebih baik dibandingkan model yang lain.')
+    st.write('Tampak bahwa model Catboost menghasilkan akurasi tertinggi ketika memprediksi data test. Selain itu, akurasinya pun tidak jauh berbeda dengan akurasi data train.')
+    st.write('Hal tersebut menunjukkan bahwa model Catboost tidak overfitting dan tidak underfitting, serta lebih baik dibandingkan model yang lain.')
     st.subheader('Alasan memilih Catboost:')
-    st.caption('Catboost merupakan improvement dari Gradient Boosting yang bekerja dengan cara menggabungkan beberapa model prediksi yang lemah untuk membuat prediksi yang lebih kuat.')
-    st.caption('Catboost membuat decision tree menggunakan algoritma Symmetric Binary Spitting yang mampu menghasilkan pohon yang seimbang dan simetris. Hal ini mampu mencegah terjadinya overfitting.')
-    st.caption('Oleh karena itu, saya memilih model Catboost untuk memprediksi data yang diinputkan oleh user.')
+    st.write('Catboost merupakan improvement dari Gradient Boosting yang bekerja dengan cara menggabungkan beberapa model prediksi yang lemah untuk membuat prediksi yang lebih kuat.')
+    st.write('Catboost membuat decision tree menggunakan algoritma Symmetric Binary Spitting yang mampu menghasilkan pohon yang seimbang dan simetris. Hal ini mampu mencegah terjadinya overfitting.')
+    st.write('Oleh karena itu, saya memilih model Catboost untuk memprediksi data yang diinputkan oleh user.')
 
 show_model_information()
