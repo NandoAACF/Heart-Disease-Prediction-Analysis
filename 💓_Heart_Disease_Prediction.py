@@ -4,10 +4,10 @@ import numpy as np
 
 def load_model():
     with open('heart_disease_model.pickle', 'rb') as f:
-        data = pickle.load(f)
-    return data
+        model = pickle.load(f)
+    return model
 
-data = load_model()
+model = load_model()
 
 def show_predict():
     st.title('💓 Heart Disease Prediction')
@@ -69,7 +69,7 @@ def show_predict():
     ok = st.button("Predict")
     if ok:
         X = np.array([[age, sex, chestpain, restingbp, cholesterol, fastingbs, restingecg, maxhr, exerciseangina, oldpeak, st_slope]])
-        pred = data.predict(X)
+        pred = model.predict(X)
         if pred == 0:
             st.subheader(f'You do not have a heart disease')
         if pred == 1:
