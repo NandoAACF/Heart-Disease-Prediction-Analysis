@@ -1,5 +1,5 @@
 # Heart Disease Prediction
-**Web App: https://heart-disease-prediction.streamlit.app/**
+**Web App: https://heart-disease-prediction-analysis.streamlit.app/**
 
 **Goal:** 
 - Visualize insight from each features
