@@ -58,7 +58,8 @@ def show_model_information():
 
     st.write('Tampak bahwa model Catboost menghasilkan akurasi tertinggi ketika memprediksi data test. Selain itu, akurasinya pun tidak jauh berbeda dengan akurasi data train.')
     st.write('Hal tersebut menunjukkan bahwa model Catboost tidak overfitting dan tidak underfitting, serta lebih baik dibandingkan model yang lain.')
-    st.subheader('Alasan memilih Catboost:')
+
+    st.subheader('😺 Alasan memilih Catboost:')
     st.write('Catboost merupakan improvement dari Gradient Boosting yang bekerja dengan cara menggabungkan beberapa model prediksi yang lemah untuk membuat prediksi yang lebih kuat.')
     st.write('Catboost membuat decision tree menggunakan algoritma Symmetric Binary Spitting yang mampu menghasilkan pohon yang seimbang dan simetris. Hal ini mampu mencegah terjadinya overfitting.')
     st.write('Oleh karena itu, saya memilih model Catboost untuk memprediksi data yang diinputkan oleh user.')
