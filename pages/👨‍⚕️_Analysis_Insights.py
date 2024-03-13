@@ -18,20 +18,7 @@ def load_data():
 df = load_data()
 
 def show_insight():
-    st.title('👨‍⚕️ Heart Disease Insight')
-
-    # st.markdown("### **1. Berapa persentase orang yang menderita penyakit jantung?**")
-    # plt.figure(figsize = (5,5))
-    # heart_disease_counts = df['HeartDisease'].value_counts()
-
-    # plt.pie(heart_disease_counts, labels=heart_disease_counts.index, autopct='%1.1f%%')
-
-    # plt.title('Heart Disease Distribution')
-    # col1, col2 = st.columns([0.3, 0.2])
-    # col1.pyplot(plt)
-    # st.write('Tampak bahwa distribusi keduanya seimbang sehingga insight yang diambil dari data ini bisa terhindar dari bias (imbalance class).')
-
-
+    st.title('👨‍⚕️ Heart Disease Insights')
 
 
     st.markdown("### **1. Umur berapa yang rawan menderita penyakit jantung?**")
@@ -230,9 +217,20 @@ def show_insight():
     st.write('Hal tersebut karena segmen ST yang datar atau menurun dapat menjadi tanda bahwa terjadi iskemia miokard, yang terjadi ketika pasokan darah dan oksigen ke otot jantung terganggu. Segmen ST yang datar atau menurun juga dapat terjadi akibat peradangan atau inflamasi pada jantung, seperti pada penyakit pericarditis atau miokarditis. Kondisi ini juga dapat terkait dengan penyakit jantung tertentu.')
 
 
+    # st.markdown("### **Berapa persentase orang yang menderita penyakit jantung?**")
+    # plt.figure(figsize = (5,5))
+    # heart_disease_counts = df['HeartDisease'].value_counts()
+
+    # plt.pie(heart_disease_counts, labels=heart_disease_counts.index, autopct='%1.1f%%')
+
+    # plt.title('Heart Disease Distribution')
+    # col1, col2 = st.columns([0.3, 0.2])
+    # col1.pyplot(plt)
+    # st.write('Tampak bahwa distribusi keduanya seimbang sehingga insight yang diambil dari data ini bisa terhindar dari bias (imbalance class).')
 
 
-    st.markdown("## **Kesimpulan**")
+
+    st.markdown("## **⭐ Kesimpulan**")
     st.write('**Ciri-ciri orang yang rawan menderita penyakit jantung:**')
     st.write('1. Laki-laki dan berusia di atas 51 tahun.')
     st.write('2. Detak jantung lemah (di bawah 130 bpm)')
