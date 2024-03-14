@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
+st.set_page_config(
+    page_title="Heart Disease Analysis Insights",
+    page_icon="👨‍⚕️"
+)
+
 @st.cache_data
 def load_data():
     # Menampilkan data

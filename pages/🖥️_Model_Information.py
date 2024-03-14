@@ -5,6 +5,11 @@ import seaborn as sns
 import plotly.express as px
 import numpy as np
 
+st.set_page_config(
+    page_title="Model Information",
+    page_icon="🖥️"
+)
+
 def show_model_information():
     st.title('🖥️ Model Information')
     st.write('Awalnya, saya menggunakan 5 model untuk memprediksi penyakit jantung, yaitu:')
