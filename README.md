@@ -1,4 +1,4 @@
-# Heart Disease Prediction
+# Heart Disease Prediction + Analysis
 **Web App: https://heart-disease-prediction-analysis.streamlit.app/**
 
 **Goal:** 
