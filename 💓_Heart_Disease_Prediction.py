@@ -18,7 +18,7 @@ def show_predict():
     st.title('💓 Heart Disease Prediction')
 
     with st.form("user_input"):
-        st.info('📢 Input data will be generated randomly if not filled. Refresh the page to generate new data.')
+        st.info('📢 Input data will be generated randomly if not filled. Refresh the page to generate new random input data.')
 
         rand_age = np.random.randint(27, 77)
         age = st.select_slider('Age', options=[i for i in range(1, 111)], value=rand_age)
